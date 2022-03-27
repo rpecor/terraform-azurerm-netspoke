@@ -1,4 +1,4 @@
-resource "azure_resource_group" "s_vnet" {
+resource "azurerm_resource_group" "s_vnet" {
   name = var.resource_group_name
   location = var.location
 
