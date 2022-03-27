@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "s_vnet" {
 resource "azurerm_virtual_network" "s_vnet" {
   name = var.v_name
   location = var.location
-  resource_group_name = azure_resource_group.s_vnet.name
+  resource_group_name = azurerm_resource_group.s_vnet.name
   address_space = [var.v_cidr]
 
   tags = var.tags
