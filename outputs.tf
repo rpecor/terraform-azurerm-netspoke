@@ -13,3 +13,13 @@ output "spoke_vnet_name" {
   value = azurerm_virtual_network.s_vnet.name
   description = "Spoke VNet name for Network team peering activites."
 }
+
+output "subnet_id" {
+  description = "output subnet IDs"
+  value = values(azurerm_subnet.spoke_subnet)[*].id
+}
+
+output "subnet_name" {
+  description = "output subnet names"
+  value = values(azurerm_subnet.spoke_subnet)[*].name
+}
