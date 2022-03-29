@@ -31,3 +31,18 @@ variable "nsg_name" {
   description = "nsg name"
   type = string
 }
+
+variable "subnets" {
+  description = "List of maps of subnets desired by the dev teams"
+  type = list(object({
+    subnet_name = string
+    address_prefix = string
+  }
+  )
+  )
+}
+
+variable "dns_servers" {
+  description = "Custom DNS soluton"
+  type = list(string)
+}
