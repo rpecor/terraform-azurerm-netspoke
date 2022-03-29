@@ -4,7 +4,7 @@ output "spoke_vnet_id" {
 }
 
 output "spoke_rg_name" {
-  value = azurerm_resource_group.s_vnet.name
+  value = azurerm_resource_group.s_vnet_rg.name
   description = "Spoke RG ID for Network team peering activites."
 
 }
