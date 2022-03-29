@@ -10,7 +10,7 @@ resource "azurerm_virtual_network" "s_vnet" {
   location = var.location
   resource_group_name = azurerm_resource_group.s_vnet_rg.name
   address_space = [var.v_cidr]
-  #dns_servers = var.dns_servers
+  dns_servers = var.dns_servers
 
   tags = var.tags
 }
